@@ -58,6 +58,8 @@ squiggles.forEach(function (squiggle, index) {
     });
 })
 
+
+// 1. This works fine
 inView('.section')
     .on('enter', section => {
         section.classList.add('in-viewport')
@@ -71,6 +73,7 @@ inView.treshold(0.2)
 
 const sections = document.querySelectorAll('.section')
 
+// 2. But this console log only shows up if I cancel out the above function
 console.log(sections)
 
 sections.forEach((section, index) => {
